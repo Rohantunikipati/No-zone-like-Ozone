@@ -7,6 +7,7 @@ import "./App.css";
 import Layout from "./componets/landingpageComponets/Layout";
 import Bottom from "./componets/landingpageComponets/Bottom";
 import Causes from "./componets/Section-2/Causes";
+import Calculation from "./componets/Section-2/Calculation";
 
 function App() {
   const [timeline, setTimeline] = useState(null);
@@ -31,6 +32,7 @@ function App() {
         {/* <Button></Button> */}
       </div>
       <Causes />
+      <Calculation />
     </>
   );
 }

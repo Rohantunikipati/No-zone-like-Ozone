@@ -1,3 +1,7 @@
+* {
+  /* overscroll-behavior: none; */
+  scroll-behavior: smooth;
+}
 .container {
   width: 100%;
   /* margin-top: 100px; */
