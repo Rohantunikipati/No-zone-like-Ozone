@@ -1,0 +1,112 @@
+/* custom.scss */
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section styles */
+section {
+  /* padding: 40px 20px; */
+
+  h1,
+  h2 {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1s ease-in-out, slideDown 1s ease-in-out;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(45deg, #0a0f0e, #2c3e50);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255),
+      0 0 25px rgba(210, 231, 231, 0.5);
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #dee3e2, #e9eef7);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7),
+      0 0 20px rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+
+  .box {
+    background-color: #ebedf0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+      background-color 0.3s ease, border 0.3s ease;
+    opacity: 0;
+    animation: slideUp 0.5s forwards;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: #cbe2f2;
+      border: 1px solid #16a085;
+
+      h3 {
+        color: #2c3e50;
+        transform: scale(1.1);
+      }
+    }
+
+    h3 {
+      color: #16a085;
+      font-size: 24px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+}

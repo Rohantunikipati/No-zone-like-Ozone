@@ -1,0 +1,115 @@
+.container {
+  width: 100%;
+  /* margin-top: 100px; */
+  height: calc(50vh);
+  display: flex;
+  flex-direction: column;
+  padding-inline: 5rem;
+  gap: 50px;
+  overflow: hidden;
+  .title {
+    .wrapper {
+      background-color: white;
+      overflow: hidden;
+      h2 {
+        position: relative;
+        z-index: 999;
+        color: white;
+        mix-blend-mode: difference;
+        font-size: 3rem;
+        line-height: 4.2rem;
+      }
+    }
+  }
+  .btn {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+}
+
+.layout {
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  .upperlayout {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    .ul1,
+    .ul2,
+    .ul3 {
+      position: absolute;
+      width: calc(100vw / 3);
+      height: 120%;
+      bottom: 0%;
+      background-color: black;
+    }
+    .ul2 {
+      left: 33.33%;
+    }
+    .ul3 {
+      left: 66.66%;
+    }
+  }
+  .lowerlayout {
+    .ll1,
+    .ll2,
+    .ll3 {
+      position: absolute;
+      width: calc(100vw / 3);
+      top: 50%;
+      right: 0;
+      height: 50%;
+      background-color: black;
+    }
+    .ll2 {
+      right: 33.33%;
+    }
+    .ll3 {
+      right: 66.66%;
+    }
+  }
+}
+
+.bottom {
+  width: 100%;
+  height: 50vh;
+  background-color: red;
+  display: flex;
+  overflow: hidden;
+
+  .imgContainer {
+    width: calc(100vw / 3);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tagline {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      padding: 5rem;
+      color: whitesmoke;
+      background-color: rgba(0, 0, 0, 0.234);
+    }
+  }
+}
